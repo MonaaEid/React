@@ -1,8 +1,29 @@
 // import ReactDOM from "react-dom/client"
 // import React from "react"
-
-const fun = (
-    <div>
+function Header() {
+    return (
+    <header>
+        <nav className="nav">
+            <img src="./react-logo.jpg" className="nav-logo" />
+            <ul className="nav-items">
+                <li><a href=""> Pricing </a> </li>
+                <li><a href=""> About </a> </li>
+                <li><a href=""> Contact </a> </li>
+            </ul>
+        </nav>
+    </header>
+    )
+}
+function Footer(){
+    return (
+        <footer>
+                © 2021 Monty development. All rights reserved.
+        </footer>
+    )
+}
+function MainContent() {
+    return (
+        <div>
         <h2>
             Fun facts about React
         </h2>
@@ -13,7 +34,17 @@ const fun = (
             <li> fgsawwrwrfg</li>
             <li> fgjkhjkhfg</li>
         </ul>
+        </div>
+    )
+}
+function Fun(){
+    return (
+    <div>
+        <Header />
+        <MainContent />
+        <Footer />
     </div>
-)
+    )
+}
 // ReactDOM.createRoot(fun).render("root")
-ReactDOM.render(fun, document.getElementById("root"))
+ReactDOM.render(<Fun />, document.getElementById("root"))
